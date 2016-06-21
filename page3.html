@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>sandbox</title>
+
+    <script type="text/javascript"
+            src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+          crossorigin="anonymous">
+
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+          integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"
+          crossorigin="anonymous">
+
+    <link rel="stylesheet"
+          href="css/font-awesome.min.css">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+            crossorigin="anonymous"></script>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
+
+    <link rel="stylesheet"
+          href="http://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/v4.0.0/build/css/bootstrap-datetimepicker.css">
+
+    <script src="http://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/v4.0.0/src/js/bootstrap-datetimepicker.js"></script>
+
+    <link rel="stylesheet"
+          href="css/my_content.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand">イベント管理システム</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="./index.html">新規イベント作成</a></li>
+            <li><a href="./page3.html">イベントの管理</a></li>
+            <li><a href="./page2.html">イベントへ参加する</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> Login user: crc9dijo</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <h1>イベント管理画面</h1>
+
+        <div class="input-group" style="margin-bottom: 20px;">
+          <span class="input-group-addon">勉強会名</span>
+          <input class="form-control" type="text" readonly="readonly" value="テスト勉強会1">
+        </div>
+
+        <div class="input-group" style="margin-bottom: 20px;">
+          <span class="input-group-addon">場所</span>
+          <input class="form-control" type="text" readonly="readonly" value="渋谷区イケイケタワー2階">
+        </div>
+
+        <div class="input-group" style="margin-bottom: 20px;">
+          <span class="input-group-addon">人数上限</span>
+          <input type="number" class="form-control" name="example" max="1000" min="0" value="100" readonly="readonly">
+        </div>
+
+      </div>
+
+      <div class="row" style="margin-bottom: 15px;">
+        <div class="col-md-6">
+          <a href="./index.html">
+            <button type="button" class="btn btn-warning btn-lg btn-block">
+              スケジュールを再調整する
+            </button>
+          </a>
+        </div>
+        <div class="col-md-6">
+          <button type="button" class="btn btn-danger btn-lg btn-block" data-toggle="modal" data-target="#deli">
+            このイベントを取り消す
+          </button>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="panel panel-default" style="margin-bottom: 30px;">
+          <div class="panel-heading">
+            6月10日(月)<br>18:00~19:00
+
+            <div style="float: right;">
+              <p>第一候補</p>
+            </div>
+          </div>
+
+          <div class="panel-body" style="text-align: center;">
+            <table class="table table-bordered">
+              <tr>
+                <td>
+                  <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                </td>
+
+                <td>
+                  <i class="fa fa-question" aria-hidden="true"></i>
+                </td>
+
+                <td>
+                  <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+                </td>
+              </tr>
+              <tr>
+                <td>20人</td>
+                <td>15人</td>
+                <td>10人</td>
+              </tr>
+            </table>
+            <div style="float: right;">
+              <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#oki">この日に決定する</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-default" style="margin-bottom: 30px;">
+          <div class="panel-heading">
+            6月10日(月)<br>18:00~19:00
+
+            <div style="float: right;">
+              <p>第二候補</p>
+            </div>
+          </div>
+
+          <div class="panel-body" style="text-align: center;">
+            <table class="table table-bordered">
+              <tr>
+                <td>
+                  <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                </td>
+
+                <td>
+                  <i class="fa fa-question" aria-hidden="true"></i>
+                </td>
+
+                <td>
+                  <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+                </td>
+              </tr>
+              <tr>
+                <td>15人</td>
+                <td>15人</td>
+                <td>15人</td>
+              </tr>
+            </table>
+            <div style="float: right;">
+              <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#oki">この日に決定する</button>
+            </div>
+          </div>
+        </div>
+
+        <div class="panel panel-default" style="margin-bottom: 30px;">
+          <div class="panel-heading">
+            6月10日(月)<br>18:00~19:00
+
+            <div style="float: right;">
+              <p>第三候補</p>
+            </div>
+          </div>
+
+          <div class="panel-body" style="text-align: center;">
+            <table class="table table-bordered">
+              <tr>
+                <td>
+                  <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+                </td>
+
+                <td>
+                  <i class="fa fa-question" aria-hidden="true"></i>
+                </td>
+
+                <td>
+                  <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+                </td>
+              </tr>
+              <tr>
+                <td>10人</td>
+                <td>15人</td>
+                <td>20人</td>
+              </tr>
+            </table>
+            <div style="float: right;">
+              <button type="button" class="btn btn-success btn-lg" data-toggle="modal" data-target="#oki">この日に決定する</button>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="deli" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">確認</h4>
+          </div>
+          <div class="modal-body">
+            本当に削除しますか
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+            <button type="button" class="btn btn-primary">Yes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="modal fade" id="oki" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+      <div class="modal-dialog" role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+            <h4 class="modal-title" id="myModalLabel">確認</h4>
+          </div>
+          <div class="modal-body">
+            この日に決定しますか？
+            決定をすると参加者へ通知が行われます。
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-default" data-dismiss="modal">No</button>
+            <button type="button" class="btn btn-primary">Yes</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+  </body>
+</html>

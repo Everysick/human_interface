@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>sandbox</title>
+
+    <script type="text/javascript"
+            src="http://code.jquery.com/jquery-2.1.1.min.js"></script>
+
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"
+          integrity="sha384-1q8mTJOASx8j1Au+a5WDVnPi2lkFfwwEAa8hDDdjZlpLegxhjVME1fgjWPGmkzs7"
+          crossorigin="anonymous">
+
+    <link rel="stylesheet"
+          href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap-theme.min.css"
+          integrity="sha384-fLW2N01lMqjakBkx3l/M9EahuwpSfeNvV63J5ezn3uZzapT0u7EYsXMjQV+0En5r"
+          crossorigin="anonymous">
+
+    <link rel="stylesheet"
+          href="css/font-awesome.min.css">
+
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js"
+            integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS"
+            crossorigin="anonymous"></script>
+
+    <script src="http://cdnjs.cloudflare.com/ajax/libs/moment.js/2.9.0/moment-with-locales.js"></script>
+
+    <link rel="stylesheet"
+          href="http://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/v4.0.0/build/css/bootstrap-datetimepicker.css">
+
+    <script src="http://cdn.rawgit.com/Eonasdan/bootstrap-datetimepicker/v4.0.0/src/js/bootstrap-datetimepicker.js"></script>
+
+    <link rel="stylesheet"
+          href="css/my_content.css">
+  </head>
+  <body>
+    <nav class="navbar navbar-inverse navbar-static-top">
+      <div class="container">
+        <div class="navbar-header">
+          <a class="navbar-brand">イベント管理システム</a>
+        </div>
+
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+          <ul class="nav navbar-nav">
+            <li><a href="./index.html">新規イベント作成</a></li>
+            <li><a href="./page3.html">イベントの管理</a></li>
+            <li><a href="./page2.html">イベントへ参加する</a></li>
+          </ul>
+
+          <ul class="nav navbar-nav navbar-right">
+            <li><a href="#"><i class="fa fa-user" aria-hidden="true"></i> Login user: crc9dijo</a></li>
+          </ul>
+        </div>
+      </div>
+    </nav>
+
+    <div class="container">
+      <div class="row">
+        <h1>イベント参加</h1>
+
+        <div class="input-group" style="margin-bottom: 20px;">
+          <span class="input-group-addon">勉強会名</span>
+          <input class="form-control" type="text" readonly="readonly" value="テスト勉強会1">
+        </div>
+
+        <div class="input-group" style="margin-bottom: 20px;">
+          <span class="input-group-addon">場所</span>
+          <input class="form-control" type="text" readonly="readonly" value="渋谷区イケイケタワー2階">
+        </div>
+
+        <div class="input-group" style="margin-bottom: 20px;">
+          <span class="input-group-addon">人数上限</span>
+          <input type="number" class="form-control" name="example" max="1000" min="0" value="100" readonly="readonly">
+        </div>
+
+        <div style="text-align: center">
+          <table class="table table-bordered">
+            <tr id='initial' style="margin-bottom: 10px;">
+              <td></td>
+              <td>
+                <i class="fa fa-thumbs-o-up" aria-hidden="true"></i>
+              </td>
+
+              <td>
+                <i class="fa fa-question" aria-hidden="true"></i>
+              </td>
+
+              <td>
+                <i class="fa fa-thumbs-o-down" aria-hidden="true"></i>
+              </td>
+            </tr>
+
+            <tr id='initial' style="margin-bottom: 10px;">
+              <td>
+                2016年6月13日(火) 18:00~19:00
+              </td>
+              <td class="switch">
+              </td>
+              <td class="switch">
+              </td>
+              <td class="switch">
+              </td>
+            </tr>
+            <tr id='initial' style="margin-bottom: 10px;">
+              <td>
+                2016年6月13日(火) 18:00~19:00
+              </td>
+              <td class="switch">
+              </td>
+              <td class="switch">
+              </td>
+              <td class="switch">
+              </td>
+            </tr>
+            <tr id='initial' style="margin-bottom: 10px;">
+              <td>
+                2016年6月13日(火) 18:00~19:00
+              </td>
+              <td class="switch">
+              </td>
+              <td class="switch">
+              </td>
+              <td class="switch">
+              </td>
+            </tr>
+            <tr id='initial' style="margin-bottom: 10px;">
+              <td>
+                2016年6月13日(火) 18:00~19:00
+              </td>
+              <td class="switch">
+              </td>
+              <td class="switch">
+              </td>
+              <td class="switch">
+              </td>
+            </tr>
+            <tr id='initial' style="margin-bottom: 10px;">
+              <td>
+                2016年6月13日(火) 18:00~19:00
+              </td>
+              <td class="switch">
+              </td>
+              <td class="switch">
+              </td>
+              <td class="switch">
+              </td>
+            </tr>
+            <tr id='initial' style="margin-bottom: 10px;">
+              <td>
+                2016年6月13日(火) 18:00~19:00
+              </td>
+              <td class="switch">
+              </td>
+              <td class="switch">
+              </td>
+              <td class="switch">
+              </td>
+            </tr>
+            <tr id='initial' style="margin-bottom: 10px;">
+              <td>
+                2016年6月13日(火) 18:00~19:00
+              </td>
+              <td class="switch">
+              </td>
+              <td class="switch">
+              </td>
+              <td class="switch">
+              </td>
+            </tr>
+          </table>
+        </div>
+
+        <a href="./page3.html">
+          <button type="button" class="btn btn-success btn-lg btn-block" style="margin-top: 20px;">イベントに登録する</button>
+        </a>
+      </div>
+    </div>
+
+    <script type="text/javascript">
+      var color_green = "rgb(0, 128, 0)",
+          color_white = $("td:last").css("background-color");
+
+      $('.switch').click(function(){
+        if ($(this).css("background-color") != color_green) {
+
+          $(this).parent().children().map(function(i, box){
+            if ($(box).css("background-color") == color_green) {
+              $(box).css("background-color", color_white);
+            }
+          });
+
+          $(this).css("background-color",color_green);
+        } else {
+          $(this).css("background-color",color_white);
+        }
+      })
+    </script>
+  </body>
+</html>
